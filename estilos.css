@@ -1,0 +1,173 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-nov-2016, 0:31:50
+    Author     : german
+*/
+/**
+Azul fondo: rgb(127,217,243)
+rojo rotom: rgb(212, 61,70);
+*/
+/**
+width 1120 limite hasta deformarse
+*/
+@font-face{
+    font-family: noSeriff;
+   src: url('fuentes/coolvetica rg.ttf');
+}
+html{
+    cursor:url(imagenes/cursorPokeball.png), auto;
+}
+body{
+    font-family: noSeriff;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1100px;
+    background-color: rgb(127,217,243); 
+
+}
+
+#barras{
+    padding-left:  80px;
+    padding-right:  80px;
+    padding-top:  10px;
+    border-top: 5px solid rgb(144,28,37);
+    background-color: rgb(212, 61,70);
+    border-right: 11px solid rgb(144,28,37);
+    border-left: 11px solid rgb(144,28,37);
+}   
+#miPc{
+    /** rgb(127,217,243);*/
+    background-color: rgb(230,237,250);
+    /**border: 4px solid rgb(173,173,173);*/
+    box-shadow: inset 0px 0px 4px 4px rgba(173,173,173,1);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content:center;
+}
+#pokemonFlotante{
+    width: 155px;
+    height: 100%;
+}
+figure:last-child{
+    text-align: center;
+}
+.figura{
+    cursor:url(imagenes/cursorPokedex.png), auto;
+    align-self:center;
+    align-content: center;
+    text-align: center;
+    width: 20%;
+    margin: 50px;
+}
+
+.figura > img{
+    max-height: 100px;
+    
+}
+/** .figura img:nth-child():
+    1 el pokemon
+    2 el figcapt
+    3 primer tipo
+    4 segundo tipo*/
+.figura img:nth-child(1){
+}
+.figura img:nth-child(4){
+    margin-left: 4px;
+
+}
+
+.nombrePoke{
+    margin-bottom: 3px;
+}
+#PieDePagina{
+    text-align: center;
+    padding: 3%;
+    
+    height: 90px;
+    background-color: rgb(212, 61,70);
+    border-top: 1px solid rgb(144,28,37);
+    border-right: 6px solid rgb(144,28,37);
+    border-left: 4px solid rgb(144,28,37);
+}
+#cabecera{
+    
+    position: relative;
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    /*background-color: rgb(212, 61,70); */
+    /*background-image: url("imagenes/cabecera.png");*/
+
+}
+#fondoCabecera{
+width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#rotomBar{
+    
+    width: 45%;
+    position: fixed;
+    /** propio */
+    align-self: flex-end;
+    /** hijos */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+}
+.buscador{
+    /**background-image: url("imagenes/bocadillo.jpeg");*/
+    margin:1px;
+    box-shadow: 1px 1px 20px rgba(212, 61,70, 0.7);
+    background-color: rgb(230,237,250);
+}
+
+#fname{
+    text-decoration: none;
+    border:none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit; 
+}
+@media only screen and (max-width:1120px ) {
+    #cabecera{
+
+    }
+}
+@media only screen and (max-width:620px ) {
+    #rotomBar{
+        flex-direction:column;
+        top:100px;
+    }
+    #pokemonFlotante{
+        order:1;
+    }
+    #rotomBar > label{
+        order:1;
+    }
+    #rotomBar > select{
+        order:4;
+    }
+    #rotomBar > form{
+        order:3;
+    }
+    
+    .buscador{
+        flex: 1;
+    }
+    #barras{
+    padding-left:  10px;
+    padding-right:  10px;
+    }
+
+}

@@ -1,0 +1,89 @@
+@font-face {
+   font-family: pokemon;
+   src: url('fuentes/Pokemon.ttf');
+}
+
+.tipografias{
+	text-shadow: -3px 0 blue, 0 3px blue, 3px 0 blue, 0 -3px blue;
+	color:yellow;
+	font-family: pokemon;
+	word-spacing: 2px;
+	letter-spacing: 5px;
+	line-height: 20px;
+	font-size: 160%;
+	/*color : rgb(71,110,175);*/
+}
+#panelInfo{
+
+	text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue;
+	font-family: noSeriff;
+	color:yellow;
+	position: fixed;
+	text-align: center;
+    margin: 10px auto;
+    width: 40%;
+	background-color: rgba(212, 61,70, 0.15) ;
+	padding: 1%;
+	z-index: 1;
+
+}
+
+#cuadro{
+	background-color: rgb(230,237,250);
+	border: 5px solid rgb(144,28,37);
+	border-bottom: 5px solid rgb(144,28,37);
+    border-right: 11px solid rgb(144,28,37);
+    border-left: 11px solid rgb(144,28,37);
+    padding: 15px;
+}
+#superiorN{
+	/**border-bottom: 1px solid rgb(144,28,37);*/
+	display: flex;
+	justify-content:center;
+	align-items: stretch;
+	height: 100%;
+}
+#idPanel{
+	width: 30%;
+}
+#nombrePanel{
+	text-align: center;
+	margin: 0 auto;
+	height: 100%;
+	width: 70%;
+	font-size: 160%;
+	font-weight: bold;
+}
+#imagenPanel{
+
+	margin: 0 auto;
+	height: 100%;
+	width: 90%;
+	display: flex;
+	justify-content:center;
+	align-items: stretch;
+}
+#pastillaBlanca{
+	border-radius: 50%;
+	background-color: white;
+}
+#textoPanel{
+	/**border-left: 1px solid rgb(144,28,37);*/
+	width: 100%;
+	padding-left: 10px;
+}
+#spanTipo{
+	font-size: 140%;
+	font-weight: bold;
+}
+@media only screen and (max-width:1120px ) {
+    #panelInfo{
+    	width: 90%;
+    }
+    #panelInfo p{
+    	margin: 5px;
+    }
+    .tipografias{
+    	font-size: 40%;
+    }
+}
