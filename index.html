@@ -17,7 +17,7 @@ C:/xampp/htdocs/Pokedex/imagenes
         <link rel="icon" href="imagenes/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body onload="llenarSelectPaginas(); llenarSelectTipos()" >
+    <body>
         <header id='cabecera'>
             <img id="fondoCabecera" src="imagenes/cabecera.png">
 
@@ -27,200 +27,20 @@ C:/xampp/htdocs/Pokedex/imagenes
 
             <!--Menu desplegable de busqueda.-->
             <div id="rotomBar">                
-                
+
                 <select title="Mostrar mas o menos Pokemon" class="buscador" id="selectPaginas"></select>            
                 <input title="Busca por nombre" type="text" class="buscador" id="fname">
                 <select title="Mostrar Pokemon por tipo" class="buscador" id="selectOrden"></select>
-                    
 
-                <img title="Mueveme!" id="pokemonFlotante" onclick="mostrarBuscador()" src="imagenes/pokemon/rotomdex.gif">
+
+                <img id="pokemonFlotante" onclick="mostrarBuscador()" src="imagenes/pokemon/rotomdex.gif">
             </div>
         </header>
 
         <div id="barras">
-          
+
             <!--            Aqui vienen LOS BICHOS          -->
-            <div id="miPc">
-                <figure class="figura shown planta veneno" id="001">
-                    <img class="imagenPokemon" src="imagenes/pokemon/001 Bulbasaur.gif">
-                    <figcaption class="nombrePoke">Bulbasaur</figcaption>
-                    <img class="tipo" src="imagenes/tipos/Tipo_planta.gif">
-                    <img class="tipo"  src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown planta veneno" id="002">
-                    <img class="imagenPokemon" src="imagenes/pokemon/002 Ivysaur.gif">
-                    <figcaption class="nombrePoke">Ivysaur</figcaption>
-                    <img class="tipo" src="imagenes/tipos/Tipo_planta.gif"><img class="tipo"  src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown planta veneno" id="003">
-                <img class="imagenPokemon" src="imagenes/pokemon/003 Venusaur.gif">
-                <figcaption class="nombrePoke">Venusaur</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_planta.gif"><img class="tipo"  src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown fuego " id="004">
-                <img class="imagenPokemon" src="imagenes/pokemon/004 charmander.gif">
-                <figcaption class="nombrePoke">charmander</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_fuego.gif">
-                </figure>
-                <figure class="figura shown fuego " id="005">
-                <img class="imagenPokemon" src="imagenes/pokemon/005 Charmeleon.gif">
-                <figcaption class="nombrePoke">Charmeleon</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_fuego.gif">
-                </figure>
-                <figure class="figura shown fuego volador" id="006">
-                <img class="imagenPokemon" src="imagenes/pokemon/006 Charizard.gif">
-                <figcaption class="nombrePoke">Charizard</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_fuego.gif"><img class="tipo"  src="imagenes/tipos/Tipo_volador.gif">
-                </figure>
-                <figure class="figura shown agua " id="007">
-                <img class="imagenPokemon" src="imagenes/pokemon/007 Squirtle.gif">
-                <figcaption class="nombrePoke">Squirtle</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_agua.gif">
-                </figure>
-                <figure class="figura shown agua " id="008">
-                <img class="imagenPokemon" src="imagenes/pokemon/008 Wartortle.gif">
-                <figcaption class="nombrePoke">Wartortle</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_agua.gif">
-                </figure>
-                <figure class="figura shown agua " id="009">
-                <img class="imagenPokemon" src="imagenes/pokemon/009 Blastoise.gif">
-                <figcaption class="nombrePoke">Blastoise</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_agua.gif">
-                </figure>
-                <figure class="figura shown bicho " id="010">
-                <img class="imagenPokemon" src="imagenes/pokemon/010 Caterpie.gif">
-                <figcaption class="nombrePoke">Caterpie</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_bicho.gif">
-                </figure>
-                <figure class="figura shown bicho " id="011">
-                <img class="imagenPokemon" src="imagenes/pokemon/011 Metapod.gif">
-                <figcaption class="nombrePoke">Metapod</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_bicho.gif">
-                </figure>
-                <figure class="figura shown bicho volador" id="012">
-                <img class="imagenPokemon" src="imagenes/pokemon/012 Butterfree.gif">
-                <figcaption class="nombrePoke">Butterfree</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_bicho.gif"><img class="tipo"  src="imagenes/tipos/Tipo_volador.gif">
-                </figure>
-                <figure class="figura shown bicho veneno" id="013">
-                <img class="imagenPokemon" src="imagenes/pokemon/013 Weedle.gif">
-                <figcaption class="nombrePoke">Weedle</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_bicho.gif"><img class="tipo"  src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown bicho veneno" id="014">
-                <img class="imagenPokemon" src="imagenes/pokemon/014 Kakuna.gif">
-                <figcaption class="nombrePoke">Kakuna</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_bicho.gif"><img class="tipo"  src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown bicho veneno" id="015">
-                <img class="imagenPokemon" src="imagenes/pokemon/015 Beedrill.gif">
-                <figcaption class="nombrePoke">Beedrill</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_bicho.gif"><img class="tipo"  src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown normal volador" id="016">
-                <img class="imagenPokemon" src="imagenes/pokemon/016 Pidgey.gif">
-                <figcaption class="nombrePoke">Pidgey</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_normal.gif"><img class="tipo"  src="imagenes/tipos/Tipo_volador.gif">
-                </figure>
-                <figure class="figura shown normal volador" id="017">
-                <img class="imagenPokemon" src="imagenes/pokemon/017 Pidgeotto.gif">
-                <figcaption class="nombrePoke">Pidgeotto</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_normal.gif"><img class="tipo"  src="imagenes/tipos/Tipo_volador.gif">
-                </figure>
-                <figure class="figura shown normal volador" id="018">
-                <img class="imagenPokemon" src="imagenes/pokemon/018 Pidgeot.gif">
-                <figcaption class="nombrePoke">Pidgeot</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_normal.gif"><img class="tipo"  src="imagenes/tipos/Tipo_volador.gif"></figure>
-                <figure class="figura shown normal " id="019">
-                <img class="imagenPokemon" src="imagenes/pokemon/019 Rattata.gif">
-                <figcaption class="nombrePoke">Rattata</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_normal.gif"></figure>
-
-                <figure class="figura shown normal " id="020">
-                <img class="imagenPokemon" src="imagenes/pokemon/020 Raticate.gif">
-                <figcaption class="nombrePoke">Raticate</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_normal.gif"></figure>
-
-                <figure class="figura shown normal  volador" id="021">
-                <img class="imagenPokemon" src="imagenes/pokemon/021 Spearow.gif">
-                <figcaption class="nombrePoke">Spearow</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_normal.gif"><img class="tipo"  src="imagenes/tipos/Tipo_volador.gif">
-
-                </figure>
-                <figure class="figura shown normal volador" id="022">
-                <img class="imagenPokemon" src="imagenes/pokemon/022 Fearow.gif">
-                <figcaption class="nombrePoke">Fearow</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_normal.gif"><img class="tipo"  src="imagenes/tipos/Tipo_volador.gif">
-                </figure>
-                <figure class="figura shown veneno " id="023">
-                <img class="imagenPokemon" src="imagenes/pokemon/023 Ekans.gif">
-                <figcaption class="nombrePoke">Ekans</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown veneno " id="024">
-                <img class="imagenPokemon" src="imagenes/pokemon/024 Arbok.gif">
-                <figcaption class="nombrePoke">Arbok</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown eléctrico " id="025">
-                <img class="imagenPokemon" src="imagenes/pokemon/025 Pikachu.gif">
-                <figcaption class="nombrePoke">Pikachu</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_electrico.gif">
-                </figure>
-                <figure class="figura shown eléctrico " id="026">
-                <img class="imagenPokemon" src="imagenes/pokemon/026 Raichu.gif">
-                <figcaption class="nombrePoke">Raichu</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_electrico.gif">
-                </figure>
-                <figure class="figura shown tierra " id="027">
-                <img class="imagenPokemon" src="imagenes/pokemon/027 Sandshrew.gif">
-                <figcaption class="nombrePoke">Sandshrew</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_tierra.gif">
-                </figure>
-                <figure class="figura shown tierra " id="028">
-                <img class="imagenPokemon" src="imagenes/pokemon/028 Sandslash.gif">
-                <figcaption class="nombrePoke">Sandslash</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_tierra.gif">
-                </figure>
-                <figure class="figura shown veneno " id="029">
-                <img class="imagenPokemon" src="imagenes/pokemon/029 Nidoran_f.gif">
-                <figcaption class="nombrePoke">Nidoran ♀</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown veneno " id="030">
-                <img class="imagenPokemon" src="imagenes/pokemon/030 Nidorina.gif">
-                <figcaption class="nombrePoke">Nidorina</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown veneno tierra" id="031">
-                <img class="imagenPokemon" src="imagenes/pokemon/031 Nidoqueen.gif">
-                <figcaption class="nombrePoke">Nidoqueen</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_veneno.gif"><img class="tipo"  src="imagenes/tipos/Tipo_tierra.gif">
-                </figure>
-                <figure class="figura shown veneno " id="032">
-                <img class="imagenPokemon" src="imagenes/pokemon/032 Nidoran_m.gif">
-                <figcaption class="nombrePoke">Nidoran ♂</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown veneno " id="033">
-                <img class="imagenPokemon" src="imagenes/pokemon/033 Nidorino.gif">
-                <figcaption class="nombrePoke">Nidorino</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_veneno.gif">
-                </figure>
-                <figure class="figura shown veneno tierra" id="034">
-                <img class="imagenPokemon" src="imagenes/pokemon/034 Nidoking.gif">
-                <figcaption class="nombrePoke">Nidoking</figcaption>
-                <img class="tipo" src="imagenes/tipos/Tipo_veneno.gif"><img class="tipo"  src="imagenes/tipos/Tipo_tierra.gif">
-                </figure>
-                    <!--BORRAR A PARTIR DE AQUI  -->
-                    
-                    <!-- HASTA AQUI -->
-                    <figure class="figura" id="notFound">
-
-                        <img class="imagenPokemon" src="imagenes/pokemon/unown-interrogation.gif">
-                        <figcaption class="nombrePoke">La busqueda no ha dado ningun resultado.</figcaption>
-                    </figure>
-            </div>
+            <div id="miPc" onload="generarPokemon()"></div>
         </div>
         <!--Panel para mostrar los datos de los pokemons-->
         <div id="panelInfo">
@@ -241,7 +61,7 @@ C:/xampp/htdocs/Pokedex/imagenes
             </div>
         </div>
         <footer id='PieDePagina'> <p>Agradecimientos a <b><a href="https://www.pkparaiso.com/sol-luna/sprites_pokemon.php">PokeParaiso</a></b> y a <b><a href="http://eled0ra.tumblr.com/">Eledora</a></b> por las imagenes</p></br>
-           <p>&copy Germán Muñoz</p>
+            <p>&copy Germán Muñoz</p>
         </footer>
         <!--<script src="jquery-3.1.1.min.js"></script>-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

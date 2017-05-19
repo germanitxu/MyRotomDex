@@ -21,4 +21,6 @@ if (isset($_POST["indice"]) and $_POST["indice"] !== '') {
 
     echo $result;
 }
+
+
 ?>
