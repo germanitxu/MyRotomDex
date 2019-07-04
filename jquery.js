@@ -19,7 +19,7 @@ $(document).ready(function () {
     /**
      *   Carga JSON
      */
-    $(".shown").click(function () {
+    $('body').on('click',".shown" , function () {
         
         $("#idPanel, #nombrePanel, #tiposTexto,#datosTexto").empty();
         var id = $(this).attr('id');
@@ -62,16 +62,16 @@ $(document).ready(function () {
      * Esta funcion va a resetear los selects al empezar la busqueda para que sea mas habil.
      */
     $("#fname").on("click", function () {
-        var pokes = $("#miPc").length;
+        /*var pokes = $("#miPc").length;
         $('#selectOrden option[value="todos"]').attr('selected', 'selected');
-
+        $("#fname").val('')
         $('#selectPaginas option[value=35]').attr('selected', 'selected');
-        $('.shown').show();
+        $('.shown').show();*/
 
     });
     /**
      * Busqueda de pokemons en el campo de busqueda
-     */
+    
     $("#fname").on("keyup", function (event) {
 
         if ($("#selectOrden").val() != 3) {
@@ -105,6 +105,22 @@ $(document).ready(function () {
 
         }
     });
+     */
+     $('#fname').keyup(function(){
+        $('figure.figura').hide();
+        search = $('#fname').val().toLocaleLowerCase()
+        $('#selectPaginas').val($('#selectPaginas').find('option:contains(Todos)').val())
+        type = $('#selectOrden').val().toLocaleLowerCase()
+        if(search != ''){
+            $( ".shown" ).each(function(i, el){
+                if(($(el).data('type-pr') == type || $(el).data('type-sc') == type || type == 'todos') && $(el).data('name').toLowerCase().includes(search)){
+                    $(el).show()
+                }
+            })
+        }else{
+            $('.shown').show();
+        }
+     })
 
 
     /**
@@ -132,6 +148,8 @@ $(document).ready(function () {
      *   Muestra solo el numero de pokemons elegidos
      */
     $("#selectPaginas").change(function () {
+        $('#fname').val('')
+        $("#selectOrden").val('todos')
         $(".shown").hide();
         var num = $("#selectPaginas").val();
         $('#selectOrden option[value=num]').attr('selected', 'selected');
@@ -146,19 +164,20 @@ $(document).ready(function () {
     $("#selectOrden").change(function () {
         $("#notFound").hide();
         $(".shown").hide();
+        $('#fname').val('')
         var num = $("#selectPaginas").val();
-        var clase = $("#selectOrden").val();
+        var clase = $("#selectOrden").val().normalize("NFD").replace(/[\u0300-\u036f]/g, ""); //Quitamos los accentos por que los data-attr no llevan
 
-        if (clase == "num") {
+        if (clase == "todos") {
             $(".shown:lt(" + num + ")").show();
 
         } else {
-            if ($("." + clase).length == 0) {
-                $("#notFound").show();
-            } else {
+            //if ($("." + clase).length == 0) {
+                //$("#notFound").show();
+            //} else {
                 $('.shown[data-type-pr="' + clase + '"]').show();
                 $('.shown[data-type-sc="' + clase + '"]').show();
-            }
+            //}
         }
 
 

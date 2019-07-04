@@ -12,7 +12,8 @@ if (isset($_POST["indice"]) and $_POST["indice"] !== '') {
     $titulo = scandir('imagenes/pokemon/');
     $result = '';
     for ($i = 0; $i < count($titulo); $i++) {
-        $nombre = substr($titulo[$i],0,-4);
+        //$nombre = substr($titulo[$i],0,-4);
+        $nombre = substr($titulo[$i],4);
         if (strpos($nombre, $_POST["indice"])) {
             $result.=$nombre;
             $result.="/";
